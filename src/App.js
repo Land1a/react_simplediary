@@ -61,9 +61,10 @@ function App() {
   };
 
   //Memoization을 사용해 return/callback함수를 최적화 할 때는 
-  //useMemo(함수,[])로 만든다. 배열에 들어있는 값이 변하면 함수 실행
+  //useMemo(함수,[])로 만든다. useEffect의 배열과 같은 즉 의존성 배열이다
+  //배열에 들어있는 값이 변하면 함수 실행
   //배열의 값이 변하지 않으면 똑같은 값을 계산하지 않고 return
-  //useMemo로 함수를 최적화하면 함수가 아님 값으로 사용
+  //useMemo로 함수를 최적화하면 함수가 아닌 값으로 사용
   //useMemo는 함수를 전달받아 함수의 return값을 반환한다
   const getDiaryAnalysis = useMemo(
     () => {
